@@ -1,7 +1,11 @@
+package model;
+
+import model.User;
+
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Doctor extends User{
+public class Doctor extends User {
     private String speciallity;
 
     Doctor(String name,String email,String speciality){

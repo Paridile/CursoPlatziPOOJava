@@ -1,4 +1,6 @@
-public class Patient extends User{
+package model;
+
+public class Patient extends User {
     private String birthday;
     private double weight;
     private double height;
