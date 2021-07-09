@@ -32,6 +32,7 @@ public class Main {
         System.out.println(patient1.getPhoneNumber());
 
         System.out.println(patient1);
+        System.out.println(doctor);
 
     }
 }
