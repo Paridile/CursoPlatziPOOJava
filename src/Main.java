@@ -1,6 +1,4 @@
-import model.Doctor;
-import model.Patient;
-import model.User;
+import model.*;
 
 import java.util.*;
 
@@ -64,6 +62,25 @@ public class Main {
             Integer key = (Integer) it.next();
             System.out.println("Clave: " + key + " -> Valor: " + treeMap.get(key));
         }
+
+        User user1 = new User("Pablo", "asdas@adsa.com") {
+            @Override
+            public void showDataUser() {
+                System.out.println("Doctor");
+                System.out.println("Hospital cruz verde");
+                System.out.println("Departamento Geriatria");
+            }
+        };
+
+        user1.showDataUser();
+
+        ISchedulable iSchedulable = new ISchedulable() {
+            @Override
+            public void schedule(Date date, String time) {
+                System.out.println("");
+            }
+        };
+
 
     }
 }
