@@ -5,7 +5,7 @@ import static UI.UIMenu.*;
 
 public class Main {
     public static void main(String[] args) {
-        Doctor doctor = new Doctor("Pablo", "Java");
+        Doctor doctor = new Doctor("Pablo", "ejemplo@ads.com", "Java");
         doctor.addAvailableAppointments(new Date(),"4 pm");
         doctor.addAvailableAppointments(new Date(),"5 pm");
         doctor.addAvailableAppointments(new Date(),"6 pm");
