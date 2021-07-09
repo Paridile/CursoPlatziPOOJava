@@ -11,7 +11,7 @@ public class Doctor {
         System.out.println("El nombre del doctor es: " +name);
         id++;
         this.name = name;
-        this.speciality = speciality;
+        this.speciallity = speciality;
     }
 
     public Doctor(String name) {
