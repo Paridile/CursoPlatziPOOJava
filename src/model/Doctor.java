@@ -8,7 +8,7 @@ import java.util.Date;
 public class Doctor extends User {
     private String speciallity;
 
-    Doctor(String name,String email,String speciality){
+    public Doctor(String name,String email,String speciality){
         super(name, email);
         this.speciallity = speciality;
     }

@@ -1,7 +1,7 @@
 import model.Doctor;
 import model.Patient;
 
-import java.util.Date;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -33,6 +33,31 @@ public class Main {
 
         System.out.println(patient1);
         System.out.println(doctor);
+
+        Map<Integer, String> map = new HashMap<>();
+        Map<Integer, String> treeMap = new TreeMap<>();
+        Map<Integer, String> linkedHashMap = new LinkedHashMap<>();
+
+        map.put(11,"Ejemplo Map");
+        treeMap.put(22,"Ejemplo con treeMap");
+        linkedHashMap.put(33,"Ejemplo linkedHashMap");
+
+        Iterator it = map.keySet().iterator();
+        while(it.hasNext()){
+            Integer key = (Integer) it.next();
+            System.out.println("Clave: " + key + " -> Valor: " + map.get(key));
+        }
+        it = linkedHashMap.keySet().iterator();
+
+        while(it.hasNext()){
+            Integer key = (Integer) it.next();
+            System.out.println("Clave: " + key + " -> Valor: " + linkedHashMap.get(key));
+        }
+        it = treeMap.keySet().iterator();
+        while(it.hasNext()){
+            Integer key = (Integer) it.next();
+            System.out.println("Clave: " + key + " -> Valor: " + treeMap.get(key));
+        }
 
     }
 }
