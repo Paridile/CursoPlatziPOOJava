@@ -1,9 +1,15 @@
 package UI;
 
+import model.Doctor;
+import model.Patient;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UIMenu {
     public static final String[] MONTHS = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+    public static Doctor doctorLogged;
+    public static Patient patientLogged;
     public static void showMenu(){
         System.out.println("Seleccione una opcion");
         int response = 0;
@@ -16,8 +22,11 @@ public class UIMenu {
             switch (response){
                 case 1:
                     System.out.println("doctor");
+                    authUser(response);
+                    response = 0;
                     break;
                 case 2:
+                    authUser(response);
                     response = 0;
                     showPatientMenu();
                     break;
@@ -59,5 +68,41 @@ public class UIMenu {
                     break;
             }
         }while (response != 0);
+    }
+
+    private static void authUser(int userType) {
+        ArrayList<Doctor> doctors = new ArrayList<Doctor>();
+        doctors.add(new Doctor("Pablo","ejemplo@asfs.com","java"));
+        doctors.add(new Doctor("Otro doctor","doctor@asfs.com","ninguna"));
+        doctors.add(new Doctor("ejemplo","otroejemplo@asfs.com","java"));
+
+        ArrayList<Patient> patients = new ArrayList<Patient>();
+        patients.add(new Patient("paciente","paciente@mail.com"));
+        patients.add(new Patient("paciente 2","paciente2@mail.com"));
+        patients.add(new Patient("paciente 3","paciente3@mail.com"));
+
+        boolean emailCorrect = false;
+        do {
+            System.out.println("insert your email");
+            Scanner sc = new Scanner(System.in);
+            String email = sc.nextLine();
+            if (userType == 1) {
+                for (Doctor d: doctors) {
+                    if (d.getEmail().equals(email)) {
+                        emailCorrect = true;
+                        doctorLogged = d;
+                    }
+                }
+            }
+            if(userType == 2) {
+                for (Patient p: patients) {
+                    if (p.getEmail().equals(email)) {
+                        emailCorrect = true;
+                        patientLogged = p;
+                    }
+                }
+            }
+        }while(!emailCorrect);
+
     }
 }
