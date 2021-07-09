@@ -1,5 +1,6 @@
 import model.Doctor;
 import model.Patient;
+import model.User;
 
 import java.util.*;
 
@@ -34,6 +35,11 @@ public class Main {
         System.out.println(patient1);
         System.out.println(doctor);
 
+        User user = new Doctor("Pablo", "ejemplosdf.com", "java");
+        user.showDataUser();
+
+        User userPa = new Patient("Otro","asd@sdf.com");
+        userPa.showDataUser();
         Map<Integer, String> map = new HashMap<>();
         Map<Integer, String> treeMap = new TreeMap<>();
         Map<Integer, String> linkedHashMap = new LinkedHashMap<>();
