@@ -48,7 +48,7 @@ public class UIMenu {
                 case 1:
                     System.out.println("Agendar cita");
                     for (int i = 1; i < 4; i++) {
-                        System.out.println(i +". " + MONTHS[i]);
+                        System.out.println(i +"-> " + MONTHS[i]);
                     }
                     break;
                 case 2:
@@ -60,7 +60,4 @@ public class UIMenu {
             }
         }while (response != 0);
     }
-
-
-
 }
