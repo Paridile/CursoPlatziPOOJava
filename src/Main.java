@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.util.Locale;
 
 import static UI.UIMenu.*;
 
@@ -8,6 +9,10 @@ public class Main {
         doctor.addAvailableAppointments(new Date(),"4 pm");
         doctor.addAvailableAppointments(new Date(),"5 pm");
         doctor.addAvailableAppointments(new Date(),"6 pm");
+
+        Day day = Day.MONDAY;
+        System.out.println(day);
+        System.out.println(day.getSpanish());
 
         for (Doctor.AvailableAppointment aA: doctor.getAvailableAppointments()) {
             System.out.println(aA.getDate() + " " + aA.getTime());
