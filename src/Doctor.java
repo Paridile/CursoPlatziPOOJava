@@ -1,18 +1,23 @@
 public class Doctor {
-    int id;
+     static int id = 0;
     String name;
     String speciallity;
 
     public Doctor() {
         System.out.println("Construyendo el objeto doctor");
+        id ++;
     }
 
     public Doctor(String name) {
         this.name = name;
-        //System.out.println("El nombre del doctor es " + name);
+        id ++;
     }
 
     public void showName() {
         System.out.println(name);
+    }
+
+    public void showId() {
+        System.out.println("ID: " + id);
     }
 }
