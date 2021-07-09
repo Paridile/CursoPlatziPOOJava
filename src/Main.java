@@ -30,5 +30,8 @@ public class Main {
         System.out.println(patient1.getWeight());
         System.out.println(patient1.getHeight());
         System.out.println(patient1.getPhoneNumber());
+
+        System.out.println(patient1);
+
     }
 }
