@@ -13,7 +13,7 @@ public class UIPatientMenu {
         do {
             System.out.println("\n\n");
             System.out.println("Paciente");
-            System.out.println("Bienvenido: " + UIMenu.patientLogged);
+            System.out.println("Bienvenido: " + UIMenu.patientLogged.getName());
             System.out.println("1. Reservar cita");
             System.out.println("2. Ver mis citas");
             System.out.println("0. Cerrar sesion");
