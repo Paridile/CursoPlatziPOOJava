@@ -72,9 +72,9 @@ public class UIMenu {
 
     private static void authUser(int userType) {
         ArrayList<Doctor> doctors = new ArrayList<Doctor>();
-        doctors.add(new Doctor("Pablo","ejemplo@asfs.com","java"));
-        doctors.add(new Doctor("Otro doctor","doctor@asfs.com","ninguna"));
-        doctors.add(new Doctor("ejemplo","otroejemplo@asfs.com","java"));
+        doctors.add(new Doctor("Pablo","ejemplo@mail.com","java"));
+        doctors.add(new Doctor("Otro doctor","doctor@mail.com","ninguna"));
+        doctors.add(new Doctor("ejemplo","otroejemplo@mail.com","java"));
 
         ArrayList<Patient> patients = new ArrayList<Patient>();
         patients.add(new Patient("paciente","paciente@mail.com"));
@@ -91,6 +91,7 @@ public class UIMenu {
                     if (d.getEmail().equals(email)) {
                         emailCorrect = true;
                         doctorLogged = d;
+                        UIDoctorMenu.showDoctorMenu();
                     }
                 }
             }
