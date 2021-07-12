@@ -19,7 +19,6 @@ public class Doctor extends User {
     ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
 
     public  void addAvailableAppointments(String date,String time) {
-
         availableAppointments.add(new AvailableAppointment(date, time));
     }
 

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UIDoctorMenu {
-    public static ArrayList<Doctor> doctorsAvailableAppointments;
+    public static ArrayList<Doctor> doctorsAvailableAppointments = new ArrayList<>();
     public static void showDoctorMenu() {
         int response = 0;
         do {
@@ -53,7 +53,7 @@ public class UIDoctorMenu {
                 String date = sc.nextLine();
                 System.out.println("Tu fecha es: " + date + "\n1.Correcto\n2.Modificar");
                 int responseDate = Integer.valueOf(sc.nextLine());
-                if(response == 2) {
+                if(responseDate == 2) {
                     continue;
                 }
                 int responseTime = 0;
@@ -73,10 +73,12 @@ public class UIDoctorMenu {
         }while (response!=0);
     }
 
-    private static void checkDoctorAvailableAppointments(Doctor doctor) {
-        if (doctor.getAvailableAppointments().size() > 0 && !doctorsAvailableAppointments.contains(doctor)) {
+    private static void checkDoctorAvailableAppointments(Doctor doctor){
+        if (doctor.getAvailableAppointments().size() > 0
+                && !doctorsAvailableAppointments.contains(doctor)){
             doctorsAvailableAppointments.add(doctor);
         }
     }
+
 
 }
