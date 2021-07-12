@@ -23,10 +23,10 @@ public class UIDoctorMenu {
                     showAddAvailableAppointments();
                     break;
                 case 2:
-
+                    checkDoctorAvailableAppointments(UIMenu.doctorLogged);
                     break;
                 case 0:
-
+                    UIMenu.showMenu();
                     break;
                 default:
                     break;

@@ -34,7 +34,7 @@ public class UIMenu {
                     System.out.println("Hasta pronto");
                     break;
                 default:
-                    System.out.println("Please select a correct answer");
+                    System.out.println("Elige una opcion valida");
             }
         }while (response != 0);
     }
@@ -100,6 +100,7 @@ public class UIMenu {
                     if (p.getEmail().equals(email)) {
                         emailCorrect = true;
                         patientLogged = p;
+                        UIPatientMenu.showPatientMenu();
                     }
                 }
             }
