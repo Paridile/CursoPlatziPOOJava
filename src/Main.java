@@ -1,23 +1,27 @@
+import model.Day;
 import model.*;
-
 import java.util.*;
-
 import static UI.UIMenu.showMenu;
 
 public class Main {
     public static void main(String[] args) {
+
+        showMenu();
+
+        /*
         Doctor doctor = new Doctor("Pablo", "ejemplo@ads.com", "Java");
         doctor.addAvailableAppointments(new Date(),"4 pm");
         doctor.addAvailableAppointments(new Date(),"5 pm");
         doctor.addAvailableAppointments(new Date(),"6 pm");
+        */
 
-        //showMenu();
-
+        /*
         Day day = Day.MONDAY;
         System.out.println(day);
         System.out.println(day.getSpanish());
+        */
 
-
+        /*
         for (Doctor.AvailableAppointment aA: doctor.getAvailableAppointments()) {
             System.out.println(aA.getDate() + " " + aA.getTime());
         }
@@ -86,6 +90,6 @@ public class Main {
             }
         };
 
-
+        */
     }
 }
