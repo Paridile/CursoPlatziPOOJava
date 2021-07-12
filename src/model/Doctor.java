@@ -61,11 +61,11 @@ public class Doctor extends User {
             this.id_availableAppointment = id_availableAppointment;
         }
 
-        public Date getDate() {
+        public Date getDate(String DATE) {
             return date;
         }
 
-        public String getDate(String DATE) {
+        public String getDate() {
             return format.format(date);
         }
 
